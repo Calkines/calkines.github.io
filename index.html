@@ -14,5 +14,15 @@
 </head>
 <body>
   Hello (Tracking with Analytics.js) World.
+  <button id="btnLogar" >Logar</button>
 </body>
+<script>
+  document.getElementById('btnLogar').addEventListener('click',logar);
+  function logar() { 
+      analytics.identify('f4ca124298', {
+        name: 'Michael Brown',
+        email: 'mbrown@example.com'
+      });  
+  }
+</script>
 </html>
