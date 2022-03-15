@@ -13,8 +13,9 @@
   <title>Tracking and exploring</title>  
 </head>
 <body>
-  Hello (Tracking with Analytics.js) World.
-  <button id="btnLogar" >Logar</button>
+  <div>Hello (Tracking with Analytics.js) World.</div>
+  <div><button id="btnLogar" >Logar</button></div>
+  <div><button id="btnRegistrar" >Registrar</button></div>
 </body>
 <script>
   document.getElementById('btnLogar').addEventListener('click',logar);
@@ -23,6 +24,11 @@
         name: 'Michael Brown',
         email: 'mbrown@example.com'
       });  
+  }
+  function registrar() {
+    analytics.track('Signed Up', {
+      plan: 'Enterprise'
+    });
   }
 </script>
 </html>
